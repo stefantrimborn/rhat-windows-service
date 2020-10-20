@@ -1,0 +1,11 @@
+[win-server:children]
+terminal-srv
+
+[terminal-srv]
+192.168.0.1
+
+[win-server:vars]
+ansible_user=SOMELOCALUSER
+ansible_password=SOMESECUREPASSWORD
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore

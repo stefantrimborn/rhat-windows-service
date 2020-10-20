@@ -1,0 +1,11 @@
+---
+- name: Set service startup mode to auto and ensure it is started
+  hosts: terminal-srv
+  gather_facts: no
+
+  tasks:
+    - name: Restart Service        
+      win_service:
+        name: spooler
+        state: restarted
+
